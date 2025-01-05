@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.container:hover {
+  transform: translate(-5px, -5px);
+}
+
+.bannerImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 0;
+}
+
+.footerContainer {
+  padding: 1rem;
+  margin-top: 0;
+}
+
+.footerTitleText {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.chipsContainer {
+  display: inline-flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}

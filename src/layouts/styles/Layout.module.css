@@ -1,0 +1,95 @@
+:root {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  gap: 2rem;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+  width: 280px;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profileImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  display: block;
+  object-fit: cover;
+}
+
+.bio {
+  text-align: center;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.jobTitle {
+  color: #666;
+  margin-bottom: -1rem;
+}
+
+.locationText {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.socialLinks a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.socialLinks a:hover {
+  color: #0000ff;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 2rem;
+  background-color: #fff;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .sidebar {
+    position: relative;
+    top: 0;
+    width: auto;
+    flex: none;
+  }
+}
