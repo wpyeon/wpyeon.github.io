@@ -8,7 +8,7 @@ export interface MediaGridItemProps {
 
 export default function MediaGridItem({ imgSrc, title, chipTypes }: MediaGridItemProps) {
   return (
-    <div className="flex flex-col rounded-lg overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:-translate-x-1 transition-transform duration-300">
+    <div className="flex flex-col rounded-lg overflow-hidden bg-white shadow-lg desktop:hover:-translate-y-1 desktop:hover:-translate-x-1 desktop:transition-transform desktop:duration-300">
       <img 
         className="w-full h-[200px] object-cover mb-0" 
         src={imgSrc} 
