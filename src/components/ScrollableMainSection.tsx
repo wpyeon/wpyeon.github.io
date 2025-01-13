@@ -1,9 +1,14 @@
 import { useEffect } from "react";
-
+import { useLocation } from "react-router-dom";
 export default function ScrollableMainSection({ children }: { children: React.ReactNode }) {
+  const location = useLocation();
+
   useEffect(() => {
-    console.log('ScrollableMainSection mounted');
-  }, []);
+    const mainElement = document.querySelector('main');
+    if (mainElement) {
+      mainElement.scrollTop = 0;
+    }
+  }, [location.pathname]); // Watch for route changes instead of children
 
   return (
     <main className="no-scrollbar h-full rounded-t-xl overflow-y-scroll">
