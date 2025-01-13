@@ -9,7 +9,7 @@
 }
 
 .container:hover {
-  transform: translate(-5px, -5px);
+  transform: translate(-3px, -3px);
 }
 
 .bannerImage {
@@ -20,6 +20,8 @@
 }
 
 .footerContainer {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   margin-top: 0;
 }

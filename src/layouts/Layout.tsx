@@ -1,16 +1,33 @@
 import { Outlet } from "react-router-dom";
-import styles from "./styles/Layout.module.css";
+import ScrollableMainSection from "../components/ScrollableMainSection";
 
 export default function Layout() {
   return (
-    <div className={styles.container}>
-      <aside className={styles.sidebar}>
-        <img src="/profile.png" alt="Profile" className={styles.profileImage} />
-        <div className={styles.bio}>
-          <h1 className={styles.name}>Woojang Pyeon</h1>
-          <p className={styles.jobTitle}>Software Engineer</p>
-          <p className={styles.locationText}>📍 Hong Kong</p>
-          <div className={styles.socialLinks}>
+    <div className="flex flex-1 flex-col gap-4 px-4 pt-4 h-dvh desktop:max-w-[1200px] desktop:flex-row desktop:h-full desktop:mx-auto desktop:p-8 desktop:gap-8">
+      <aside className="h-fit flex gap-4 p-2 items-center bg-surface rounded-xl shadow-md desktop:sticky desktop:p-4 desktop:gap-8 desktop:w-[300px] desktop:flex-col desktop:p-8 desktop:top-8">
+        <div className="rounded-full overflow-hidden -mr-2 w-[56px] h-[56px] desktop:w-[200px] desktop:h-[200px] desktop:mr-0">
+          <img
+            src="/profile/profile-mobile.png"
+            alt="Profile image"
+            className="desktop:hidden w-full h-full object-cover"
+          />
+          <img
+            src="/profile/profile-desktop.png"
+            alt="Profile image"
+            className="hidden desktop:block w-full h-full object-cover"
+          />
+        </div>
+        <div className="items-center">
+          <div className="mb-0 mt-1 text-m font-bold desktop:text-xl desktop:mb-4">
+            Woojang Pyeon
+          </div>
+          <p className="hidden desktop:block text-gray-600 mb-0">
+            Software Engineer
+          </p>
+          <p className="hidden desktop:block text-gray-600 mb-4">
+            📍 Hong Kong
+          </p>
+          <div className="inline-flex justify-center gap-2">
             <a
               href="https://github.com/wpyeon"
               target="_blank"
@@ -25,16 +42,20 @@ export default function Layout() {
             >
               LinkedIn
             </a>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a
+              href="/profile/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Resume(PDF)
             </a>
           </div>
         </div>
       </aside>
 
-      <main className={styles.mainContent}>
+      <ScrollableMainSection>
         <Outlet />
-      </main>
+      </ScrollableMainSection>
     </div>
   );
 }

@@ -9,7 +9,6 @@
   max-width: 980px;
   margin: 0 auto;
   padding: 2rem;
-  min-height: 100vh;
 }
 
 .sidebar {
@@ -71,7 +70,7 @@
 }
 
 .mainContent {
-  flex: 1;
+  height: 100%;
   padding: 2rem;
   background-color: #fff;
   color: #333;

@@ -1,5 +1,4 @@
-import styles from "./styles/mediaGridItem.module.css";
-import DevChip, { ChipProps } from "./Chips";
+import DevChip from "./Chips";
 
 export interface MediaGridItemProps {
   imgSrc: string;
@@ -9,13 +8,17 @@ export interface MediaGridItemProps {
 
 export default function MediaGridItem({ imgSrc, title, chipTypes }: MediaGridItemProps) {
   return (
-    <div className={styles.container}>
-      <img className={styles.bannerImage} src={imgSrc} alt={"Project Image"} />
-      <div className={styles.footerContainer}>
-        <div className={styles.footerTitleText}>
+    <div className="flex flex-col rounded-lg overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:-translate-x-1 transition-transform duration-300">
+      <img 
+        className="w-full h-[200px] object-cover mb-0" 
+        src={imgSrc} 
+        alt="Project Image" 
+      />
+      <div className="flex flex-col p-4 mt-0">
+        <div className="text-base font-semibold text-gray-800 mb-2">
           {title ? title : "Project"}
         </div>
-        <div className={styles.chipsContainer}>
+        <div className="inline-flex gap-1 flex-wrap">
           {chipTypes.map((chipType) => (
             <DevChip key={chipType} type={chipType} />
           ))}

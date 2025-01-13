@@ -1,4 +1,3 @@
-import styles from "./styles/Chips.module.css";
 import { SiReact, SiElectron, SiSqlite } from "react-icons/si";
 
 export interface ChipProps {
@@ -21,7 +20,10 @@ const iconDict: { [key: string]: ChipType } = {
 export default function DevChip({ type }: ChipProps) {
   const { icon, label, color, textColor } = iconDict[type];
   return (
-    <div className={styles.container} style={{ backgroundColor: color, color: textColor }}>
+    <div 
+      className="inline-flex items-center px-2 gap-1 rounded-lg text-sm font-semibold"
+      style={{ backgroundColor: color, color: textColor }}
+    >
       {icon}
       <span>{label}</span>
     </div>
