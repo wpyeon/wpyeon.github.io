@@ -201,8 +201,8 @@ websocket.on("message", (data) => {
         before the order is successfully placed. This happens due to how events
         are arrived at WebSocket. I noticed that Binance's WebSocket API
         provides multiple messages at an instance, causing
-        <i>WebSocket.onMessage(callback)</i> to execute simultaneously. Since the
-        callback we provide the WebSocket object is asynchronous, some
+        <i>WebSocket.onMessage(callback)</i> to execute simultaneously. Since
+        the callback we provide the WebSocket object is asynchronous, some
         operations can bypass the lock.
       </p>
       <h3>The Solution</h3>
@@ -210,7 +210,8 @@ websocket.on("message", (data) => {
         The handler functions still have to be asynchronous, since it should not
         block other operations such as profit calculations and database updates.
         It is only the <i>EventHandlers</i> that should not interfere with each
-        other. To tackle this issue, <i>EventQueue</i> has been implemented as such:
+        other. To tackle this issue, <i>EventQueue</i> has been implemented as
+        such:
       </p>
       <CodeSnippet code={codeSnippet3} />
       <p>
@@ -229,14 +230,16 @@ websocket.on("message", (data) => {
       <p>
         I am constantly expanding my knowledge in various software engineering
         field, from frontend Javascript frameworks to machine learning. If you
-        found my article interesting, don't hesitate to connect with me on
-        LinkedIn. Thanks for visiting! 👋
+        enjoyed my article, don't hesitate to connect with me on LinkedIn.
+        Thanks for visiting! 👋
       </p>
       <p className="whitespace-pre-line text-caption">
-        <i>Note 1: The API I connected to in the screenshots is the Binance testnet
-        API. The data presented aren't real. {`\n`}
-        Note 2: The code snippet does not strictly follow the actual code of
-        mine. I just wanted to represent the logic of my actual code briefly.</i>
+        <i>
+          Note 1: The API I connected to in the screenshots is the Binance
+          testnet API. The data presented aren't real. {`\n`}
+          Note 2: The code snippet does not strictly follow the actual code of
+          mine. I just wanted to represent the logic of my actual code briefly.
+        </i>
       </p>
     </section>
   );
