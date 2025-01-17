@@ -21,12 +21,11 @@ export default function Home() {
             chipTypes={["react", "electron", "sqlite"]}
           />
         </Link>
-        <Link to="/binance-trader">
+        <Link to="/timer-blocks">
           <MediaGridItem
-            imgSrc="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
-            title="Timer Blocks Web App"
-            chipTypes={["react"]}
-          />
+            imgSrc="/timer-block-project/banner.png"
+            title="[WIP] Timer Blocks Web App"
+            chipTypes={["react"]}/>
         </Link>
       </div>
     </div>

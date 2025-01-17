@@ -44,8 +44,8 @@ export default {
         'display-small': ['2.5rem', { lineHeight: '1.2', fontWeight: '700' }],
         
         'desktop-heading-1': ['2rem', { lineHeight: '1.3', fontWeight: '700'}],
-        'desktop-heading-2': ['1.75rem', { lineHeight: '1.3', fontWeight: '600' }],
-        'desktop-heading-3': ['1.5rem', { lineHeight: '1.3', fontWeight: '600' }],
+        'desktop-heading-2': ['1.5rem', { lineHeight: '1.3', fontWeight: '600' }],
+        'desktop-heading-3': ['1.25rem', { lineHeight: '1.3', fontWeight: '600' }],
 
         'heading-1': ['1.5rem', { lineHeight: '1.3', fontWeight: '700'}],
         'heading-2': ['1.25rem', { lineHeight: '1.3', fontWeight: '600' }],

@@ -18,7 +18,7 @@ export default function Layout() {
           />
         </div>
         <div className="items-center">
-          <div className="mb-0 mt-1 text-m font-bold desktop:text-xl desktop:mb-4">
+          <div className="mb-0 mt-1 text-m font-bold desktop:text-desktop-heading-3 desktop:mb-4">
             Woojang Pyeon
           </div>
           <p className="hidden desktop:block text-gray-600 mb-0">
