@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import styles from "./styles/MainPage.module.css";
 import { useEffect } from "react";
 import Breadcrumb from "../components/Breadcrumb";
 import { ArticleImage } from "../components/ArticleImage";
@@ -39,45 +38,45 @@ class Channel {
   const codeSnippet2 = `var lock = false; // global lock
 
 const handleBTCUSDTBookTickerUpdate = async (message) => {
-	if (!lock && message.price >== upperBound) {
-		lock = true;
-		// ...send buy order
-	}
+  if (!lock && message.price >== upperBound) {
+    lock = true;
+    // ...send buy order
+  }
 };
 
 // ...more codes here
 
 const handleOrderUpdate = async (message) => {
-	if (message.status === "200") {
-		// ...reposition baseline and upper bound
-		// ...handle order success
-		lock = false;
-	}
+  if (message.status === "200") {
+    // ...reposition baseline and upper bound
+    // ...handle order success
+    lock = false;
+  }
 }`;
   const codeSnippet3 = `const eventQueue: Event[];
 const eventQueueLock = false;
 
 const onMessage = () => {
-	if (eventQueueLock) return;
-	this.eventQueueLock = true;
-	const event = this.eventQueue.shift();
-	if (event) {
-		// find and execute corresponding handler
-		this.eventQueueLock = false;
-		this.onMessage();
-	}
-	else {
-		this.eventQueueLock = false;
-	}
+  if (eventQueueLock) return;
+  this.eventQueueLock = true;
+  const event = this.eventQueue.shift();
+  if (event) {
+    // find and execute corresponding handler
+    this.eventQueueLock = false;
+    this.onMessage();
+  }
+  else {
+    this.eventQueueLock = false;
+  }
 }
 
 websocket.on("message", (data) => {
-	for (handler in handlers) {
-		if (handler.event === someEvent) {
-			this.eventQueue.push();
-			onMessage();
-		}
-	}
+  for (handler in handlers) {
+    if (handler.event === someEvent) {
+      this.eventQueue.push();
+      onMessage();
+    }
+  }
 })`;
 
   return (
