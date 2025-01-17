@@ -32,6 +32,7 @@ export default function Layout() {
               href="https://github.com/wpyeon"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:underline"
             >
               GitHub
             </a>
@@ -39,6 +40,7 @@ export default function Layout() {
               href="https://www.linkedin.com/in/woojang-pyeon-81600122b/"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:underline"
             >
               LinkedIn
             </a>
@@ -46,6 +48,7 @@ export default function Layout() {
               href="/profile/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:underline"
             >
               Resume(PDF)
             </a>
