@@ -17,6 +17,10 @@
     @apply font-sans text-neutral-800 bg-background;
   }
 
+  html, body {
+    @apply max-w-full overflow-x-clip;
+  }
+
   h1 {
     @apply text-heading-1 text-neutral-900 mb-6;
   }
@@ -97,11 +101,4 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-@media (min-width: 980px /* breakpoint for desktop layout */ ) {
-  .top-level-container {
-    padding-left: calc(100vw - 100%);
-    background-color: red;
-  }
 }

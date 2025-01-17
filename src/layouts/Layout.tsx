@@ -3,7 +3,7 @@ import ScrollableMainSection from "../components/ScrollableMainSection";
 
 export default function Layout() {
   return (
-    <div className="flex flex-1 flex-col gap-4 px-4 pt-4 h-dvh desktop:max-w-[1200px] desktop:flex-row desktop:h-full desktop:mx-auto desktop:p-8 desktop:gap-8">
+    <div className="flex flex-1 flex-col gap-4 px-4 pt-4 h-dvh desktop:w-screen desktop:flex-row desktop:justify-center desktop:h-full desktop:p-8 desktop:gap-8">
       <aside className="h-fit flex gap-4 p-2 items-center bg-surface rounded-xl shadow-md desktop:sticky desktop:p-4 desktop:gap-8 desktop:w-[300px] desktop:flex-col desktop:p-8 desktop:top-8">
         <div className="rounded-full overflow-hidden -mr-2 w-[56px] h-[56px] desktop:w-[200px] desktop:h-[200px] desktop:mr-0">
           <img
