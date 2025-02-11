@@ -1,4 +1,5 @@
 import { SiReact, SiElectron, SiSqlite } from "react-icons/si";
+import { FaChartSimple } from "react-icons/fa6";
 
 export interface ChipProps {
   type: string;
@@ -14,7 +15,8 @@ interface ChipType {
 const iconDict: { [key: string]: ChipType } = {
   "react": { icon: <SiReact />, label: "React", color: "#61DBFB", textColor: "#000" },
   "electron": { icon: <SiElectron />, label: "Electron", color: "#1b1c25", textColor: "#fff" },
-  "sqlite": { icon: <SiSqlite />, label: "SQLite", color: "#003b57", textColor: "#fff" }
+  "sqlite": { icon: <SiSqlite />, label: "SQLite", color: "#003b57", textColor: "#fff" },
+  "recharts": { icon: <FaChartSimple />, label: "Recharts", color: "#ff8150", textColor: "#fff" }
 }
 
 export default function DevChip({ type }: ChipProps) {
