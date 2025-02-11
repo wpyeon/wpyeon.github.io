@@ -21,6 +21,14 @@ export default function Home() {
             chipTypes={["react", "electron", "sqlite"]}
           />
         </Link>
+        <Link to="https://wpyeon.github.io/visstory-web/" target="_blank">
+          <MediaGridItem
+            imgSrc="/visstory-project/banner.png"
+            title="Visual Data Storytelling Competition Submission"
+            chipTypes={["react", "recharts"]}
+            isExternalLink={true}
+          />
+        </Link>
         <Link to="/timer-blocks">
           <MediaGridItem
             imgSrc="/timer-block-project/banner.png"
