@@ -29,10 +29,10 @@ export default function Home() {
             isExternalLink={true}
           />
         </Link>
-        <Link to="/timer-blocks">
+        <Link to="/82timer">
           <MediaGridItem
             imgSrc="/timer-block-project/banner.png"
-            title="[WIP] Timer Blocks Web App"
+            title="[WIP] 82timer"
             chipTypes={["react"]}/>
         </Link>
       </div>

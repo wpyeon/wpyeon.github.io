@@ -10,7 +10,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/binance-trader" element={<ProjectBinanceTrader />} />
-          <Route path="/timer-blocks" element={<ProjectTimerBlocks />} />
+          <Route path="/82timer" element={<ProjectTimerBlocks />} />
         </Route>
       </Routes>
     </HashRouter>
